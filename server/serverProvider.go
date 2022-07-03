@@ -45,7 +45,7 @@ func (srv *Server) Stop() {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
-	logrus.Info("closing server...")
+	logrus.Info("closing   server...")
 	_ = srv.httpServer.Shutdown(ctx)
 	logrus.Info("Done")
 }
