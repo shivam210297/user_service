@@ -28,7 +28,7 @@ jobs:
 
       # Setup gcloud CLI
       - name: Setup gcloud
-        uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
+        uses: google-github-actions/setup-gcloud@590822c60937939089b5a5ab9c16176b5c1e32be
         with:
           service_account_key: ${{ env.SERVICE_ACCOUNT_KEY }}
           project_id: ${{ env.PROJECT_ID }}
