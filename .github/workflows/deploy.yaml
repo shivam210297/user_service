@@ -20,7 +20,7 @@ jobs:
           if [[ "${{github.base_ref}}" == "main" || "${{github.ref}}" == "refs/heads/main" ]]; then
              echo "GKE_CLUSTER=user-microservice" >> "$GITHUB_ENV"
              echo "DEPLOYMENT_NAME=user-server" >> "$GITHUB_ENV"
-             echo "CONTAINER_NAME=user-service-server" >> "$GITHUB_ENV"
+             echo "CONTAINER_NAME=user-service" >> "$GITHUB_ENV"
              echo "GKE_ZONE=us-central1-a" >> "$GITHUB_ENV"
           fi
       - name: Checkout
