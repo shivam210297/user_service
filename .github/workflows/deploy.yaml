@@ -17,7 +17,7 @@ jobs:
         run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
       - name: Set branch environments
         run: |-
-          if [[ "${{github.base_ref}}" == "main" || "${{github.ref}}" == "refs/heads/dev" ]]; then
+          if [[ "${{github.base_ref}}" == "main" || "${{github.ref}}" == "refs/heads/main" ]]; then
              echo "GKE_CLUSTER=user-microservice" >> "$GITHUB_ENV"
              echo "DEPLOYMENT_NAME=user-service-server" >> "$GITHUB_ENV"
              echo "CONTAINER_NAME=user-service-server" >> "$GITHUB_ENV"
