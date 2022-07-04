@@ -17,7 +17,7 @@ func main() {
 	go srv.Start()
 
 	<-done
-	logrus.Info("Graceful shutdown")
+	logrus.Info("Graceful  shutdown")
 	srv.Stop()
 
 }
