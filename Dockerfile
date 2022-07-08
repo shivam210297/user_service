@@ -1,11 +1,11 @@
 FROM golang:alpine as user-server
 ENV GO111MODULE=on
 WORKDIR /server
-COPY go.mod ./
-COPY go.sum ./
+COPY go.mod /server/
+COPY go.sum /server/
 RUN go mod download
 
-COPY *.go ./
+COPY . .
 RUN go build -o /go/bin/user-service cmd/main.go
 
 FROM scratch
