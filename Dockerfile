@@ -6,7 +6,7 @@ COPY go.sum /server/
 RUN go mod download
 
 COPY . .
-RUN go build -o /go/bin/user-service cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -mod=readonly -o /go/bin/user-service cmd/main.go
 
 FROM scratch
 COPY --from=user-server /go/bin/user-service /go/bin/user-service
