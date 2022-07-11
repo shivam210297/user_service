@@ -24,7 +24,7 @@ func SrvInit() *Server {
 
 func (srv *Server) Start() {
 
-	addr := "localhost:8082"
+	addr := ":8082"
 	httpSrv := &http.Server{
 		Addr:              addr,
 		Handler:           srv.InjectRoutes(),
